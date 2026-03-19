@@ -13,7 +13,7 @@ spec:
     targetRevision: 15.0.0
     helm:
       valueFiles:
-        - ../../../resources/apps/web/values.yaml
+        - ../resources/apps/web/values.yaml
 
   destination:
     server: https://kubernetes.default.svc
