@@ -14,4 +14,22 @@ spec:
         - ../../../resources/apps/redis/values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
+    namespace: defaultapiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redis-valeria
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://charts.bitnami.com/bitnami'
+    targetRevision: 18.0.0
+    chart: redis
+    helm:
+      values: |
+        auth:
+          enabled: false
+        architecture: standalone
+  destination:
+    server: 'https://kubernetes.default.svc'
     namespace: default

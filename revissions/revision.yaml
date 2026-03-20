@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: master-root-app
+  name: master-apps
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/vkhj26/test-argocd.git'
-    targetRevision: HEAD # Esto hace que use siempre lo último que subas
-    path: manifests/apps/_overlays # El punto de entrada de tu Kustomize
+    targetRevision: HEAD
+    path: manifests/apps/_overlays
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
   syncPolicy:
-    automated: # Opcional: Para que se sincronice solo sin dar al botón
+    automated:
       prune: true
       selfHeal: true
