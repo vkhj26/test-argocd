@@ -11,7 +11,7 @@ spec:
     path: manifests/apps/_overlays
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: argocd # Se despliega en el namespace de Argo para controlar el resto
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
