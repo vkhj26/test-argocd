@@ -15,7 +15,7 @@ spec:
           tag: latest
         staticSiteConfig:
           enabled: true
-          content: "<h1>¡Hola Valeria!</h1><p>¡Lograste configurar GitOps!</p>"
+          content: "<h1>¡Hola Valeria!</h1><p>Lo lograste.</p>"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
