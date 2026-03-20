@@ -13,7 +13,7 @@ spec:
       values: |
         staticSiteConfig:
           enabled: true
-          content: "<h1>¡Hola Valeria!</h1><p>Desplegado con ArgoCD y Helm.</p>"
+          content: "<h1>¡Hola Valeria!</h1><p>Desplegado con ArgoCD.</p>"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
